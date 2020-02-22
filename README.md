@@ -99,3 +99,12 @@ Unleash your LG V35 ThinQ
   2. MTP模式不能正常使用
   3. 挂载USB存储模式不能正常使用
   4. 备份的时候会有"system_root"无法卸载的错误信息(但是好像不影响使用)
+
+## 参考 Reference
+
+* https://forum.xda-developers.com/lg-v40/development/unlock-lg-v40-via-9008-root-t-mobile-t4042207
+* https://forum.xda-developers.com/lg-v40/development/twrp-lg-v40-judypn-t3970111
+* https://bbs.lge.fun/thread-14.htm
+* https://g7.lge.fun/guide/twrpboot.html
+* https://www.cnblogs.com/stars-one/p/10723732.html
+* https://forum.xda-developers.com/android/software/universal-dm-verity-forceencrypt-t3817389
