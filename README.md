@@ -27,7 +27,7 @@
 
 * 安装[QPST & QFIL](https://qpsttool.com/qpst-tool-v2-7-480), 下载LG的845通用的[Firehose](https://url.cn/5hRy6EO)
 * 让V35进入Emergency Download (EDL，又称9008)模式
-> 手机连电脑，按住电源键和Vol-重启，熄屏的瞬间按住的键不要松并且开始狂按Vol+。如果手机保持黑屏并且电脑上提示插入了新设备，则成功进入模式，
+> 手机连电脑，按住电源键和Vol-重启，熄屏的瞬间按住的键不要松并且开始狂按Vol+。如果手机保持黑屏并且电脑上提示插入了新设备(Qualcomm HS-USB QDLoader 9008 (COM#))，则成功进入模式，
 * 然后需要稍做配置：
 > * 点击 Select Port 选择 EDL/9008 模式中的手机
 > * 选择 Flat Build
