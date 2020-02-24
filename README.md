@@ -47,7 +47,7 @@
 
 1. 如果你已经有Magisk (面具)，可以刷入`twrp-installer-vX.X.X-v35_#.zip` (#对应安装的slot，例如a则代表安装到slot a)
 2. 如果没有现成的Magisk，建议先备份boot_a分区内容，然后刷入`twrp-vX.X.X-v35.img` 由于此镜像的内核是从V350ULM20e提取的，在其他型号上的效果待测。
-3. 利用boot.img编辑工具，你可以手动把原版的zImage和`ramdisk-twrp.cpio`合成为新的含TWRP的boot镜像。具体操作和原理可以参考下面↓
+3. 利用boot.img编辑工具，你可以手动把原版boot提取的zImage和下载的`ramdisk-twrp.cpio`合成为新的含TWRP的boot镜像。具体操作和原理可以参考下面↓
 
 <details>
   <summary>爱搞机的你也可以选择自己魔改V40的TWRP，点击查看方法 Click to expand!</summary>
