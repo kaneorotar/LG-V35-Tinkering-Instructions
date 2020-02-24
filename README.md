@@ -36,13 +36,15 @@
 * 准备就绪后点击顶栏菜单的Tools -> Partition Manager -> OK。如果一切顺利，大概5秒后会弹出一个窗口列出一大堆的分区。如果界面长时间(超过一分钟)卡住不动，建议重启手机重新进入EDL/9008模式。
 * 分区列表载入完后可以对分区做清除 (Erase)，读取 (Read Data...)，载入镜像文件 (Load Image...)的操作。在对应分区上右键点击Manage Partiton Data即可。
 * 在继续下一步之前建议先用Read Data备份以下几个原版分区
+> * abl_a
+> * abl_b
 > * boot_a
 > * boot_b
 > * laf_a
 > * laf_b
-* 刷入[V35工程机的boot](https://url.cn/5Ni6nuO)并重启手机。
+* 将[V35工程机的abl](https://url.cn/5Ni6nuO)刷入abl_a并重启手机。
 * 手机会自动进入fastboot模式。在电脑端使用`fastboot oem unlock`解锁 (此操作会清除内置存储的数据)
-* 再进入EDL/9008模式，还原boot分区
+* 再进入EDL/9008模式，还原abl_a分区
 * (可选项) 清除laf_a分区(建议备份)，这样手机启动时如果试图进入Download模式(按住Vol+)会因为对应的代码被清空而退而进入fastboot模式。
 
 强烈建议在对任何分区做修改之前先用"Read Data"做个备份，对应的文件会在`C:\Users\你的用户名\AppData\Roaming\Qualcomm\QFIL\COMPORT_##`内。
