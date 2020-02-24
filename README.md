@@ -42,8 +42,8 @@
 > * boot_b
 > * laf_a
 > * laf_b
-* 将[V35工程机的abl](https://url.cn/5Ni6nuO)刷入abl_a并重启手机。
-* 手机会自动进入fastboot模式。在电脑端使用`fastboot oem unlock`解锁 (此操作会清除内置存储的数据)
+* 将[V35工程机的abl](https://url.cn/5Ni6nuO)刷入abl_a并先关闭QFIL，否则一定几率下次连接无法读取。
+* 重启手机，应该会自动进入fastboot模式。在电脑端使用`fastboot oem unlock`解锁 (此操作会清除内置存储的数据)
 * 再进入EDL/9008模式，还原abl_a分区
 * (可选项) 清除laf_a分区(建议备份)，这样手机启动时如果试图进入Download模式(按住Vol+)会因为对应的代码被清空而退而进入fastboot模式。
 
@@ -105,7 +105,7 @@
 
 然后想办法进Recovery。
 
-> 最保险的方式是root之后用工具软件(例如Magisk Manager)重启到recovery。没有的话也可以开启USB调试后连电脑然后使用 `adb reboot recovery`指令
+> 最保险的方式是root之后用工具软件(例如Magisk Manager，“模块”界面菜单键->重启到 Recovery)重启到recovery。没有的话也可以开启USB调试后连电脑然后使用 `adb reboot recovery`指令(初次连接需要在手机端授权允许，请注意弹窗。如果没有弹，可以尝试切换到“仅充电 (Charging Only)”模式)
 > 
 > **注意：以下方法建议在A/B slot的boot的recovery都替换成了TWRP之后再尝试，否则可能会因为切换slot进入正常的恢复出厂流程，将导致内置存储数据全部丢失。**
 > 
