@@ -13,7 +13,7 @@
 
 ## 准备 Before we start
 
-所需的材料：LG-V35, Micro SD卡一张
+所需的材料：LG-V35, Micro SD卡一张或U盘+OTG转接头/线一个
 
 所需的工具：[安卓SDK平台工具(platform-tools)](https://developer.android.com/studio/releases/platform-tools.html?hl=zh-CN)（其实就是需要其中的adb.exe和fastboot.exe)，(如果你打算解剖boot镜像)boot.img编辑工具(例如[Android Image Kitchen](https://forum.xda-developers.com/showthread.php?t=2073775))， 
 
@@ -113,7 +113,7 @@
 
 刷[Universal DM-Verity, ForceEncrypt, Disk Quota Disablers](https://forum.xda-developers.com/android/software/universal-dm-verity-forceencrypt-t3817389)
 
-> 请提前把[zip](https://zackptg5.com/downloads/Disable_Dm-Verity_ForceEncrypt_01.19.2020.zip)下载好放在microSD卡上。内置存储由于还未解密所以TWRP暂时无法读取。(如果链接失效，请访问[作者官网](https://zackptg5.com/android.php#disverfe)找到“Dm-Verity & ForceEncrypt Disabler”进行下载)
+> 请提前把[zip](https://zackptg5.com/downloads/Disable_Dm-Verity_ForceEncrypt_01.19.2020.zip)下载好放在microSD卡/U盘上。内置存储由于还未解密所以TWRP暂时无法读取。(如果链接失效，请访问[作者官网](https://zackptg5.com/android.php#disverfe)找到“Dm-Verity & ForceEncrypt Disabler”进行下载)
 > 
 > 刷zip的过程中你应该会看到几行红字提示无法卸载vendor分区之类的，只要没有提示zip包失败就没有关系。
 > 
