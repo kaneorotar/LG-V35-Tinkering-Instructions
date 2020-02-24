@@ -9,11 +9,19 @@
 
 本文有可能存在错误，欢迎指正。Please feel free to correct me if you spot any errors in this guide.
 
+----------
+
+## 准备 Before we start
+
 所需的材料：LG-V35, Micro SD卡一张
 
 所需的工具：[安卓SDK平台工具(platform-tools)](https://developer.android.com/studio/releases/platform-tools.html?hl=zh-CN)（其实就是需要其中的adb.exe和fastboot.exe)，(如果你打算解剖boot镜像)boot.img编辑工具(例如[Android Image Kitchen](https://forum.xda-developers.com/showthread.php?t=2073775))， 
 
 ----------
+
+## 开始 Here we go
+
+### 解Bootloader锁 Unlock Bootloader
 
 首先，你需要解开Bootloader锁 (参考[这篇](https://forum.xda-developers.com/lg-v40/development/unlock-lg-v40-via-9008-root-t-mobile-t4042207)或[这篇](https://forum.xda-developers.com/lg-v35/development/bootloader-unlock-root-instruction-t4052145))。简述下来有这几步：
 
@@ -38,6 +46,8 @@
 * (可选项) 清除laf_a分区(建议备份)，这样手机启动时如果试图进入Download模式(按住Vol+)会因为对应的代码被清空而退而进入fastboot模式。
 
 强烈建议在对任何分区做修改之前先用"Read Data"做个备份，对应的文件会在`C:\Users\你的用户名\AppData\Roaming\Qualcomm\QFIL\COMPORT_##`内。
+
+### 安装TWRP 
 
 接下来，你得有V35能用的TWRP。~~虽然直接为V35编译的TWRP是不存在的，但是~~ 花了一天时间踩各种坑修改源码编译了一个[能用的版本](https://github.com/kaneorotar/LG-V35-Tinkering-Instructions/releases)(基于V40，暂时无法解密原生data)，仅在Pie (9.0)上测试通过。 
 
@@ -86,6 +96,8 @@
   > * 刚更名的initrd\init.recovery.judyp.rc内，搜索"judypn"并替换为"judyp"  
   
 </details>
+
+### 解密 Remove Forceencrypt
 
 然后想办法进Recovery。
 
