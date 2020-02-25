@@ -61,7 +61,7 @@
 2. 如果没有现成的Magisk，建议先备份boot_a分区内容，然后刷入`twrp-vX.X.X-v35.img` 由于此镜像的内核是从V350ULM20e提取的，在其他型号上的效果待测。
 3. 利用boot.img编辑工具，你可以手动把原版boot提取的zImage和下载的`ramdisk-twrp.cpio`合成为新的含TWRP的boot镜像。具体操作和原理可以参考下面↓
 
-**注意：如果你对slot A/B的概念不熟悉，可以阅读[Project Treble相关的文章](https://sspai.com/post/40890)。** 单来说就是手机内系统需要的分区统统准备了两份，系统更新的时候旧的系统能保留在另一个slot中应急。在一个时间点真正被只有一个slot(通常是a)，所以一般你只需要安装到你实际在用的slot即可。使用`fastboot getvar current-slot`可以获取当前激活的slot的信息。
+**注意：如果你对slot A/B的概念不熟悉，可以阅读[Project Treble相关的文章](https://sspai.com/post/40890)。** 单来说就是手机内系统需要的分区统统准备了两份，系统更新的时候旧的系统能保留在另一个slot中应急。在一个时间点真正被使用的只有一个slot(通常是a)，所以一般你只需要安装到你实际在用的slot即可。使用`fastboot getvar current-slot`可以获取当前激活的slot的信息。
 
 <details>
   <summary>爱搞机的你也可以选择自己魔改V40的TWRP，点击查看方法 Click to expand!</summary>
