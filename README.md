@@ -43,7 +43,7 @@
 > * laf_a
 > * laf_b
 * 将[V35工程机的abl](https://url.cn/5Ni6nuO)刷入abl_a并先关闭QFIL，否则一定几率下次连接无法读取。
-* 重启手机，应该会自动进入fastboot模式。在电脑端使用`fastboot oem unlock`解锁 (此操作会清除内置存储的数据)
+* 重启手机（电源键和Vol-），应该会自动进入fastboot模式。在电脑端使用`fastboot oem unlock`解锁 (此操作会清除内置存储的数据)
 * 再进入EDL/9008模式，还原abl_a分区
 * (可选项) 清除laf_a分区(建议备份)，这样手机启动时如果试图进入Download模式(按住Vol+)会因为对应的代码被清空而退而进入fastboot模式。
 
