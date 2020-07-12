@@ -6,16 +6,16 @@
 
 ### :loudspeaker: Disclaimer: I will not be responsible for any possible damage to your device/data. Proceed at your own risk.
 
-:speech_balloon: Please feel free to correct me if you spot any errors in this guide.
+:speech_balloon: Feedback is welcome. Please feel free to correct me if you spot any errors in this guide.
 
 ----------
 
 ## Preparation
 
 Hardware：
- * Computer running Windows x1
- * LG V35 ThinQ x1 (running Official Pie)
- * Micro SD Card x1 (or USB Drive x1 + OTG Adapter/Cable x1)
+ * 1x Computer running Windows
+ * 1x LG V35 ThinQ (running Official Pie)
+ * 1x Micro SD Card (or 1x USB Drive + 1x OTG Adapter/Cable)
 
 Software：
  * [Android SDK Platform Tools](https://developer.android.com/studio/releases/platform-tools.html)（We need adb.exe and fastboot.exe). 
