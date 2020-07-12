@@ -28,7 +28,7 @@
 
 ### 解Bootloader锁 Bootloader Unlocking
 
-首先，你需要解开Bootloader锁 (参考[这篇](https://forum.xda-developers.com/lg-v40/development/unlock-lg-v40-via-9008-root-t-mobile-t4042207)或[这篇](https://forum.xda-developers.com/lg-v35/development/bootloader-unlock-root-instruction-t4052145))。简述下来有这几步：
+参考自[这篇](https://forum.xda-developers.com/lg-v40/development/unlock-lg-v40-via-9008-root-t-mobile-t4042207)或[这篇](https://forum.xda-developers.com/lg-v35/development/bootloader-unlock-root-instruction-t4052145))。简述下来有这几步：
 
 * 安装[QPST & QFIL](https://qpsttool.com/qpst-tool-v2-7-480), 下载LG的845通用的[Firehose](https://url.cn/5hRy6EO)
 * 让V35进入Emergency Download (EDL，又称9008)模式
@@ -114,13 +114,13 @@
 
 > 先把[zip](https://zackptg5.com/downloads/Disable_Dm-Verity_ForceEncrypt_03.04.2020.zip)下载好放在Micro SD卡/U盘上。内置存储由于还未解密所以TWRP暂时无法读取。(如果链接失效，请访问[作者官网](https://zackptg5.com/android.php#disverfe)找到“Dm-Verity & ForceEncrypt Disabler”进行下载)
 
-然后想办法进TWRP/Recovery。
+然后想办法进TWRP。
 
 > 最保险的方式是root之后用工具软件(例如Magisk Manager，“模块”界面菜单键->重启到 Recovery)重启到recovery。没有的话也可以开启USB调试后连电脑然后使用 `adb reboot recovery`指令(初次连接需要在手机端授权允许，请注意弹窗。如果没有弹，可以尝试切换到“仅充电 (Charging Only)”模式)
 > 
-> **注意：以下方法建议在A/B slot的boot的recovery都替换成了TWRP之后再尝试，否则可能会因为切换slot进入正常的恢复出厂流程，将导致内置存储数据全部丢失。**
+> **注意：以下方法建议在`boot_a`和`boot_b`的recovery都替换成了TWRP之后再尝试，否则可能会因为切换slot进入正常的恢复出厂流程，将导致内置存储数据全部丢失。**
 > 
-> 另一种方式是先按住电源健和Vol-，等重启到LGV35画面亮起来之后松开电源键再按回去。手机会进入一个白屏一段文字两个按钮的恢复出厂的提示界面，选两次Yes后重启就会进入recovery。
+> 另一种方式是先按住电源健和Vol-，等重启到LGV35画面亮起来之后松开电源键再按回去。手机会进入一个白屏一段文字两个按钮的恢复出厂的提示界面，选两次Yes后重启就会进入TWRP。
 
 进入TWRP之后便可刷入上述的zip。
 > 
