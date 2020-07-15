@@ -73,11 +73,11 @@ You can install it in 2 ways:
 
 **Notice: All TWRP installation methods replaces the ramdisk of the `boot` partition. This means existing Magisk will be gone. But don't panic, you can simply flash Magisk-vXX.X.zip from TWRP afterward.**
 
-1. If you already have Magisk installed, you can flash `twrp-installer-vX.X.X-v35_*.zip` from Magisk Manager (`*` can be `a` or `b` depending on which slot you want it installed).
+1. If you already have Magisk installed, you can flash `twrp-installer-vX.X.X-v35_*.zip` from Magisk Manager (`*` can be `a`, `b` or `ab` depending on which slot(s) you want it installed).
    
 2. If you do not have Magisk installed, backup your `boot_a/b` partition with QFIL and then flash `twrp-vX.X.X-v35.img` with 'Load Image...' or `fastboot flash boot_a/b twrp-vX.X.X-v35.img` from command line. (The kernel of this image was extracted from V350ULM20e and *seems* to work fine for Pie in general)
 
-**Notice: You can read more about slot A/B [here](https://www.xda-developers.com/how-a-b-partitions-and-seamless-updates-affect-custom-development-on-xda/)。** To put it simply, your phone holds 2 sets (`a` and `b`) of OS partitions for seamless. OS upgrades are being flashed to slot `a` or `b` in turns which allows the phone to fallback to the previous version if anything goes wrong with the new one. Only one of the slots is being used (active) at any point in time (usually slot `a`) and that's where you want to install TWRP. The active slot can be found using `fastboot getvar current-slot`.
+**Notice: You can read more about slot A/B [here](https://www.xda-developers.com/how-a-b-partitions-and-seamless-updates-affect-custom-development-on-xda/)。** To put it simply, your phone holds 2 sets (`a` and `b`) of OS partitions. OS upgrades are being flashed to slot `a` or `b` in turns which allows the phone to fallback to the previous version if anything goes wrong with the new one. Only one of the slots is being used (active) at any point in time (usually slot `a`) and that's where you want TWRP installed. The active slot can be found using `fastboot getvar current-slot` command.
 
 ### Forceencrypt Disabling
 
@@ -91,7 +91,7 @@ Now enter TWRP/Recovery.
 > 
 > **Notice: It is recommended to have TWRP installed on both `boot_a` and `boot_b` before trying the method below. Otherwise you risk losing all userdata if the phone switches to vanilla recovery and starts the factory reset process.**
 > 
-> Alternatively, you can first press and hold Power and Vol- keys. Once the device reaches the 'LG V35' screen, briefly release the Power key and then press it (multiple times if you want). The phone should enter a white screen with two buttons. Choose 'Yes' twice and it will reboot into TWRP.
+> Alternatively, you can first press and hold Power and Vol- keys. Once the device reaches the 'LG V35' screen, briefly release the Power key and then press it (multiple times if you want). The phone should enter a white screen with two buttons. Choose 'Yes' twice and it will reboot into TWRP (even though it says factory reset).
 
 After entering TWRP, you can flash the zip downloaded above.
 > During flashing, you may see error messages about 'unable to unmount vendor'. This is fine as long as the zip flashing doesn't fail halfway.
